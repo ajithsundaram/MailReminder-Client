@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="/style.css">
+
+    <title>Easy E-mail schedular</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a  class="" style="margin-left: 10px;">Email Reminder
+      
+        </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a id="about" href="About.html">About</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="row hide" id="displ">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span id ="mailDetails"class="card-title">Thanks Your Mail Reminder is Created </span>
+               <p id="dynamictime">it will sent in </p>
+               <p id="changetime">___</p>
+               <div class="card-action">
+                <span id ="predetails"class="card-title">Your previous Reminder Details</span>
+                <div id="root">
+                </div>
+              </div>
+               
+                <a class="waves-effect waves-light btn" onclick="toggledipla()">Go back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <form id="form" class="col s12" style="align-items: center; " >
+
+        <div class="row">
+            <p style="font-weight: 300;"> <b>Enter Mail id to remind </b></p>
+          <div class="input-field col s12">
+            <input id="email" type="email" required  class="validate" style="width: 400px; "> 
+            <label for="email">Email</label>
+          </div>
+        </div>
+
+
+        <div class="row">
+            <p style="font-weight: 300;"> <b> Enter Content to sent</b></p>
+            <div class="input-field col s12">
+              <textarea id="mailContent" class="materialize-textarea" style="width: 400px; " data-length="120"></textarea>
+              <label for="textarea2">Reminder content</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <p style="font-weight: 300;"> <b>Reminder Date</b></p>
+            <div class="input-field col s12">
+                    <input id="sDate" type="text" class="datepicker" style="width: auto; ">
+                <label for="textarea2"> Date</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <p style="font-weight: 300;"><b>Reminder Time</b></p>
+            <div class="input-field col s12">
+                    <input type="text" id="sTime"class="timepicker" style="width: auto; ">
+                <label for="textarea2"> Time</label>
+            </div>
+        </div>
+
+        <a class="waves-effect waves-light btn" onclick="PostCall()">Done</a>
+      </form>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(elems,"");
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems1 = document.querySelectorAll('.timepicker');
+    var instances = M.Timepicker.init(elems1, "");
+  });
+      </script>
+
+      <script src="/script.js"></script>
+
+
+       
+      </div>
+</body>
+</html>

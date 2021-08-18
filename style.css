@@ -1,0 +1,15 @@
+form{
+    margin: 30px;
+    align-items: center;
+}
+form>p{
+    font-weight: 500;
+}
+
+.hide{
+display: none;
+}
+#aboutpage{
+    margin: 30px;
+    align-items: center;
+}
