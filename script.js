@@ -23,7 +23,7 @@ const a=false;
        }
        else{
         toggledipla();
-        makeservercall(receiverEmail,mailContent,sDate.toUTCString(),sTime);
+        makeservercall(receiverEmail,mailContent,given.toUTCString(),sTime);
         M.toast({html: 'Mail Reminder Scheduled successfully'});
          setInterval(() => {
              const a=new Date();
