@@ -23,7 +23,7 @@ const a=false;
        }
        else{
         toggledipla();
-        makeservercall(receiverEmail,mailContent,given.toUTCString(),sTime);
+        makeservercall(receiverEmail,mailContent,given.toUTCString());
         M.toast({html: 'Mail Reminder Scheduled successfully'});
          setInterval(() => {
              const a=new Date();
@@ -102,12 +102,12 @@ function timeDiffCalc(dateFuture, dateNow) {
    return difference;
   }
 
-  function makeservercall(receiverEmail,mailContent,givenDate,givenTime){
+  function makeservercall(receiverEmail,mailContent,givenDateTIme){
     var obj = new Object();
     obj.rEmail = receiverEmail;
     obj.mailContent  = mailContent;
-    obj.scheduledDate = givenDate;
-    obj.scheduledTime=givenTime;
+    obj.scheduledDateTime = givenDateTIme;
+   // obj.scheduledTime=givenTime;
 //  //   console.log(givenDate+"--"+givenTime);
 //     var bodyjson=JSON.parse({
 //       "rEmail:"+receiverEmail,
