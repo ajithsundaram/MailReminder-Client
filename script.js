@@ -140,7 +140,7 @@ localStorage.setItem("reminder",JSON.stringify(mainobj));
     localStorage.removeItem("reminder");
      localStorage.setItem("reminder",JSON.stringify(mobj));
    }
-    fetch("https://mail-remainder-server.vercel.app/scheduleMail", {
+    fetch("https://emailreminder.cleverapps.io/scheduleMail", {
       method: "POST",
       body:JSON.stringify(obj),
       headers: {
