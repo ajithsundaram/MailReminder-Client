@@ -23,7 +23,7 @@ const a=false;
        }
        else{
         toggledipla();
-        makeservercall(receiverEmail,mailContent,sDate,sTime);
+        makeservercall(receiverEmail,mailContent,sDate.toUTCString(),sTime);
         M.toast({html: 'Mail Reminder Scheduled successfully'});
          setInterval(() => {
              const a=new Date();
@@ -117,7 +117,7 @@ function timeDiffCalc(dateFuture, dateNow) {
 //   });
 const arr=[];
    if(localStorage.getItem("reminder")==null){
-console.log("first time");
+//console.log("first time");
 var mainobj = new Object();
 arr.push(obj);
 mainobj.schedules=arr;
@@ -127,7 +127,7 @@ localStorage.setItem("reminder",JSON.stringify(mainobj));
      const farray=[];
      var a=localStorage.getItem("reminder")
      const arr=JSON.parse(a);
-     console.log("thampi"+JSON.stringify(arr));
+    // console.log(+JSON.stringify(arr));
      console.log(arr.schedules[0]);
      console.log(Object.keys(arr.schedules).length)
      for(let i=0;i<Object.keys(arr.schedules).length;i++){
